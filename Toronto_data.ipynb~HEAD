@@ -16,7 +16,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 98,
+   "execution_count": 1,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -28,7 +28,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 99,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
@@ -116,7 +116,7 @@
        "4      M5A  Downtown Toronto      Harbourfront"
       ]
      },
-     "execution_count": 99,
+     "execution_count": 2,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -142,7 +142,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 100,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [
     {
@@ -152,15 +152,15 @@
       "Not assigned        77\n",
       "Etobicoke           45\n",
       "North York          38\n",
-      "Downtown Toronto    37\n",
       "Scarborough         37\n",
+      "Downtown Toronto    37\n",
       "Central Toronto     17\n",
       "West Toronto        13\n",
       "York                 9\n",
       "East Toronto         7\n",
       "East York            6\n",
-      "Queen's Park         1\n",
       "Mississauga          1\n",
+      "Queen's Park         1\n",
       "Name: Borough, dtype: int64\n"
      ]
     }
@@ -173,7 +173,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 101,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
     {
@@ -181,19 +181,19 @@
       "text/plain": [
        "Etobicoke           45\n",
        "North York          38\n",
-       "Downtown Toronto    37\n",
        "Scarborough         37\n",
+       "Downtown Toronto    37\n",
        "Central Toronto     17\n",
        "West Toronto        13\n",
        "York                 9\n",
        "East Toronto         7\n",
        "East York            6\n",
-       "Queen's Park         1\n",
        "Mississauga          1\n",
+       "Queen's Park         1\n",
        "Name: Borough, dtype: int64"
       ]
      },
-     "execution_count": 101,
+     "execution_count": 4,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -205,7 +205,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 102,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
@@ -250,7 +250,7 @@
        "6      M7A  Queen's Park  Not assigned"
       ]
      },
-     "execution_count": 102,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -263,7 +263,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 103,
+   "execution_count": 6,
    "metadata": {},
    "outputs": [
     {
@@ -364,7 +364,7 @@
        "8      M1B       Scarborough             Rouge"
       ]
      },
-     "execution_count": 103,
+     "execution_count": 6,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -384,7 +384,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 104,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -395,7 +395,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 106,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [
     {
@@ -1259,7 +1259,7 @@
        "102                                          Northwest  "
       ]
      },
-     "execution_count": 106,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1270,7 +1270,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 95,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
@@ -1279,7 +1279,7 @@
        "103"
       ]
      },
-     "execution_count": 95,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1287,6 +1287,231 @@
    "source": [
     "# final no.of rows\n",
     "df.shape[0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Adding latitude and longitude data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Postal Code</th>\n",
+       "      <th>Latitude</th>\n",
+       "      <th>Longitude</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>M1B</td>\n",
+       "      <td>43.806686</td>\n",
+       "      <td>-79.194353</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>M1C</td>\n",
+       "      <td>43.784535</td>\n",
+       "      <td>-79.160497</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>M1E</td>\n",
+       "      <td>43.763573</td>\n",
+       "      <td>-79.188711</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>M1G</td>\n",
+       "      <td>43.770992</td>\n",
+       "      <td>-79.216917</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>M1H</td>\n",
+       "      <td>43.773136</td>\n",
+       "      <td>-79.239476</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "  Postal Code   Latitude  Longitude\n",
+       "0         M1B  43.806686 -79.194353\n",
+       "1         M1C  43.784535 -79.160497\n",
+       "2         M1E  43.763573 -79.188711\n",
+       "3         M1G  43.770992 -79.216917\n",
+       "4         M1H  43.773136 -79.239476"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df1 = pd.read_csv('Geospatial_Coordinates.csv')\n",
+    "df1.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df1.rename(columns={'Postal Code': 'Postcode'},inplace=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Postcode</th>\n",
+       "      <th>Borough</th>\n",
+       "      <th>Neighbourhood</th>\n",
+       "      <th>Latitude</th>\n",
+       "      <th>Longitude</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>M1B</td>\n",
+       "      <td>Scarborough</td>\n",
+       "      <td>Rouge, Malvern</td>\n",
+       "      <td>43.806686</td>\n",
+       "      <td>-79.194353</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>M1C</td>\n",
+       "      <td>Scarborough</td>\n",
+       "      <td>Highland Creek, Rouge Hill, Port Union</td>\n",
+       "      <td>43.784535</td>\n",
+       "      <td>-79.160497</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>M1E</td>\n",
+       "      <td>Scarborough</td>\n",
+       "      <td>Guildwood, Morningside, West Hill</td>\n",
+       "      <td>43.763573</td>\n",
+       "      <td>-79.188711</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>M1G</td>\n",
+       "      <td>Scarborough</td>\n",
+       "      <td>Woburn</td>\n",
+       "      <td>43.770992</td>\n",
+       "      <td>-79.216917</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>M1H</td>\n",
+       "      <td>Scarborough</td>\n",
+       "      <td>Cedarbrae</td>\n",
+       "      <td>43.773136</td>\n",
+       "      <td>-79.239476</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "  Postcode      Borough                           Neighbourhood   Latitude  \\\n",
+       "0      M1B  Scarborough                          Rouge, Malvern  43.806686   \n",
+       "1      M1C  Scarborough  Highland Creek, Rouge Hill, Port Union  43.784535   \n",
+       "2      M1E  Scarborough       Guildwood, Morningside, West Hill  43.763573   \n",
+       "3      M1G  Scarborough                                  Woburn  43.770992   \n",
+       "4      M1H  Scarborough                               Cedarbrae  43.773136   \n",
+       "\n",
+       "   Longitude  \n",
+       "0 -79.194353  \n",
+       "1 -79.160497  \n",
+       "2 -79.188711  \n",
+       "3 -79.216917  \n",
+       "4 -79.239476  "
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df_toronto = pd.merge(df,df1, on='Postcode')\n",
+    "df_toronto.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(103, 5)"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df_toronto.shape"
    ]
   }
  ],
