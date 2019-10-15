@@ -1,2 +1,2 @@
 # Coursera_capstone
-This repository contains files from IBM's Data science capstone project
+This repository contains files for Segmenting and clustering of Toronto neighbourhoods with foursquare API, a capstone project from IBM's applied data science course 
